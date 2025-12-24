@@ -1,0 +1,10 @@
+name: Windows RDP
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Enable RDP
+      run: |
+        net user administrator P@ssw0rd123
+        Enable-PSRemoting -Force
